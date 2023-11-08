@@ -12,5 +12,8 @@
     <string name="tittle">Tittle</string>
     <string name="company">Company Name</string>
     <string name="location">Location</string>
+    <string name="search">Search</string>
+    <string name="fulltime">Fulltime</string>
+    <string name="apply_filter">Apply filter</string>
 
 </resources>
