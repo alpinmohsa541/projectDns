@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">projectDns</string>
+    <string name="login">login</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="register">Register</string>
+    <string name="click_to_login">Click To Login</string>
+    <string name="click_to_register">Click To Register</string>
+
 </resources>
