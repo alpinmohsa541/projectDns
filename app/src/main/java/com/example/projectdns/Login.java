@@ -6,8 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,14 +23,34 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity{
+
     TextInputEditText editTextEmail, editTextPassword;
     Button buttonLogin;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
     TextView textView;
 
+
     @Override
     public void onStart() {
+//        //show and hide password
+//        ImageView imageViewShowHidePwd = findViewById(R.id.imageview_show_hide);
+//        imageViewShowHidePwd.setImageResource(R.drawable.hidden);
+//        imageViewShowHidePwd.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick (View view){
+//                if(editTextPassword.getTransformationMethod().equals(HideReturnsTransformationMethod.getInstance())){
+//                    //id password is visible then hide it
+//                    editTextPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+//                    //Change Icon
+//                    imageViewShowHidePwd.setImageResource(R.drawable.hidden);
+//                }else {
+//                    editTextPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+//                    imageViewShowHidePwd.setImageResource(R.drawable.view);
+//                }
+//            }
+//        });
+
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
@@ -58,8 +81,11 @@ public class Login extends AppCompatActivity{
         });
 
         buttonLogin.setOnClickListener(new View.OnClickListener(){
+
+
             @Override
             public void onClick(View view){
+
                 progressBar.setVisibility(View.VISIBLE);
                 String email,password;
                 email = String.valueOf(editTextEmail.getText());

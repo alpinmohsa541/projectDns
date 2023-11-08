@@ -35,9 +35,18 @@
             android:id="@+id/password"
             android:hint="@string/password"
             android:layout_width="match_parent"
+            app:startIconDrawable="@drawable/hidden"
             android:layout_height="wrap_content">
 
         </com.google.android.material.textfield.TextInputEditText>
+
+        <ImageView
+            android:id="@+id/imageview_show_hide"
+            android:layout_below="@+id/textview_login_pwd"
+            android:layout_width="30dp"
+            android:layout_height="32dp">
+
+        </ImageView>
     </com.google.android.material.textfield.TextInputLayout>
     <ProgressBar
         android:id="@+id/progressBar"
