@@ -27,6 +27,17 @@ public class Register extends AppCompatActivity {
     ProgressBar progressBar;
     TextView textView;
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +47,9 @@ public class Register extends AppCompatActivity {
         editTextEmail = findViewById(R.id.email);
         editTextPassword = findViewById(R.id.password);
         buttonReg = findViewById(R.id.btn_register);
-        progressBar - findViewById(R.id.progressBar);
+        progressBar = findViewById(R.id.progressBar);
         textView = findViewById(R.id.loginNow);
-        TextView.setOnClickListener(new View.OnClickListener(){
+        textView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(getApplicationContext(), Login.class);
@@ -71,7 +82,7 @@ public class Register extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(Register.this, "Accoubt created.",
+                                    Toast.makeText(Register.this, "Account created.",
                                             Toast.LENGTH_SHORT).show();
                                 } else {
                                     // If sign in fails, display a message to the user.
@@ -81,7 +92,6 @@ public class Register extends AppCompatActivity {
                             }
                         });
                 }
-            };
-        });
+            });
+        }
     }
-}
