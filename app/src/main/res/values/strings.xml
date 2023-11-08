@@ -7,13 +7,12 @@
     <string name="click_to_login">Click To Login</string>
     <string name="click_to_register">Click To Register</string>
     <string name="logout">Logout</string>
-    <string name="job_list">JOB LIST</string>
-    <string name="posisi">Posisi</string>
-    <string name="tittle">Tittle</string>
-    <string name="company">Company Name</string>
-    <string name="location">Location</string>
+    <string name="apply_filter">Apply Filter</string>
+    <string name="fulltime">Full Time</string>
+    <string name="location">Location\n</string>
+    <string name="job_list">JOB LIST\n</string>
     <string name="search">Search</string>
-    <string name="fulltime">Fulltime</string>
-    <string name="apply_filter">Apply filter</string>
+    <string name="titile">Tittle</string>
+    <string name="desc">Deskription</string>
 
 </resources>
