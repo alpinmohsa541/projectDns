@@ -14,5 +14,6 @@
     <string name="search">Search</string>
     <string name="titile">Tittle</string>
     <string name="desc">Deskription</string>
+    <string name="hello_blank_fragment">"Hallo "</string>
 
 </resources>

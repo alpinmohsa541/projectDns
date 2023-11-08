@@ -1,54 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="8dp"
+    app:cardCornerRadius="8dp">
 
-    <TextView
-        android:id="@+id/title_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/titile"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="193dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/fulltime_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fulltime"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="249dp" />
+        <ImageView
+            android:id="@+id/logoPT"
+            android:layout_width="70dp"
+            android:layout_height="70dp"/>
 
-    <TextView
-        android:id="@+id/desc_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/desc"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="308dp" />
+        <!-- text view for our course name -->
+        <TextView
+            android:id="@+id/idTVCourseName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_toRightOf="@+id/logoPT"
+            android:text="PT Name"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/titile"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="222dp" />
+        <!-- text view for our course description -->
+        <TextView
+            android:layout_toRightOf="@+id/logoPT"
+            android:id="@+id/idTVCourseDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTVCourseName"
+            android:padding="5dp"
+            android:text="Job Description"
+            android:textSize="10sp"
+            android:textColor="@color/black" />
 
-    <TextView
-        android:id="@+id/fulltime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fulltime"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="280dp" />
-
-    <TextView
-        android:id="@+id/desc"
-        android:layout_width="365dp"
-        android:layout_height="308dp"
-        android:text="@string/desc"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="339dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btndetail"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:gravity="end" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
