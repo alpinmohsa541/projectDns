@@ -7,5 +7,10 @@
     <string name="click_to_login">Click To Login</string>
     <string name="click_to_register">Click To Register</string>
     <string name="logout">Logout</string>
+    <string name="job_list">JOB LIST</string>
+    <string name="posisi">Posisi</string>
+    <string name="tittle">Tittle</string>
+    <string name="company">Company Name</string>
+    <string name="location">Location</string>
 
 </resources>
