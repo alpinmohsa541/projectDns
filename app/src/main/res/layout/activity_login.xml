@@ -40,13 +40,13 @@
 
         </com.google.android.material.textfield.TextInputEditText>
 
-        <ImageView
-            android:id="@+id/imageview_show_hide"
-            android:layout_below="@+id/textview_login_pwd"
-            android:layout_width="30dp"
-            android:layout_height="32dp">
+<!--        <ImageView-->
+<!--            android:id="@+id/imageview_show_hide"-->
+<!--            android:layout_below="@+id/textview_login_pwd"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="32dp">-->
 
-        </ImageView>
+<!--        </ImageView>-->
     </com.google.android.material.textfield.TextInputLayout>
     <ProgressBar
         android:id="@+id/progressBar"
