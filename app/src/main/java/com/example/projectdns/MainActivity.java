@@ -1,3 +1,4 @@
+package com.example.projectdns;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -24,20 +25,15 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.facebook.FacebookSdk;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.yukkerja.databinding.ActivityMainBinding;
+
 import com.google.firebase.FirebaseApp;
 
 import org.json.JSONArray;
@@ -56,7 +52,7 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
 public class MainActivity extends AppCompatActivity {
-    String URL_DATA = "https://dev3.dansmultipro.co.id/api/recruitment/positions.json";
+    String URL_DATA = "https://dev6.dansmultipro.com/api/recruitment/positions.json";
     private RecyclerView courseRV;
 
     // variable for our adapter
@@ -75,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FirebaseApp.initializeApp(this);
         setContentView(R.layout.activity_main);
-        RelativeLayout filter= (RelativeLayout) findViewById(R.id.lyfilter);
+        RelativeLayout filter = (RelativeLayout) findViewById(R.id.lyfilter);
 
         // initializing our variables.
         courseRV = findViewById(R.id.recycler_view);
@@ -86,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (filter.getVisibility() == View.VISIBLE) {
-                    filter.setVisibility(View.INVISIBLE );
+                    filter.setVisibility(View.INVISIBLE);
                 } else {
                     filter.setVisibility(View.VISIBLE);
                 }
@@ -143,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(MainActivity.this, "Fail to get the data.."+error, Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Fail to get the data.." + error, Toast.LENGTH_LONG).show();
             }
         });
         queue.add(jsonArrayRequest);
@@ -197,10 +193,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception ignored) {
         }
     }
-
-
-
-
 
 
 }
